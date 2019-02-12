@@ -8,6 +8,8 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <meta name="theme-color" content="#000000" />
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+        
     <!--
       manifest.json provides metadata used when your web app is added to the
       homescreen on Android. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -23,6 +25,20 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
+    <style>
+      body { margin:0; padding:0; font-size: small;}
+      #map-container {
+          position: relative;
+          height: 900px;
+          padding: 0px 0px 0px 10px;
+      }
+
+      #map {
+          position: relative;
+          height: inherit;
+          width: inherit;
+      }
+    </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -37,5 +53,10 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3bS8lMeYMP1QI_gqSHQNbRNb5k_tONS8&callback=initMap"
+    async defer></script>
+    <script src="https://www.amcharts.com/lib/4/core.js"></script>
+    <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
   </body>
 </html>

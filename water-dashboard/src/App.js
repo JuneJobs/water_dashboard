@@ -1,69 +1,80 @@
+// import ReactDOM from 'react-dom';
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import logo from './logo.svg';
-import './App.css';
-import PropTypes from 'prop-types';
-import { withStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
-import Paper from '@material-ui/core/Paper';
+import AppBar from './containers/AppBar'; 
+import Map from './containers/Map';
+import InfoPanel from './containers/InfoPanel';
+import InfoPanel2 from './containers/InfoPanel2';
 import Grid from '@material-ui/core/Grid';
-import Map from './Containers/map'
-//
+import './App.css';
 
-const styles = theme => ({
-  root: {
-    flexGrow: 1,
-  },
-  paper: {
-    //height: 140,
-    textAlign: 'center',
-    margin: `${theme.spacing.unit * 2}px 0`
-  },
-  control: {
-    padding: theme.spacing.unit * 2,
-  },
-  grow: {
-    flexGrow: 1,
-  },
-  menuButton: {
-    marginLeft: -12,
-    marginRight: 20,
-  }
-});
-function ButtonAppBar(props) {
-  const { classes } = props;
-  return (
-    <div className={classes.root}>
-      <AppBar position="static">
-        <Toolbar>
-          <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" color="inherit" className={classes.grow}>
-            Water Quality Map
-          </Typography>
-          <Button color="inherit">Login</Button>
-        </Toolbar>
-      </AppBar> 
-      <Map/>
-      <Grid justify="center" container spacing={24}>
-        <Grid item xs={11}>
-          <Paper className={classes.paper}>
-            Local Map
-          </Paper>
-        </Grid>
-      </Grid>
-    </div>
-  );
+const TOKEN = "pk.eyJ1Ijoic2txbDEzMSIsImEiOiJjam1yN2s3MjkwMDAwM3Fucml5enMwYmNoIn0.qI7zb7L6ufxpBi6Z1BvuHg";
+const LONG = 128.491519;
+const LAT = 35.855229;
+const ZOOM = 14.26;
+const STYLE_ID = 'mapbox://styles/mapbox/streets-v9';
+
+
+export default class App extends Component {
+    
+    constructor() {
+        super();
+        this.state = {
+            value: 1,
+        };
+        this.handleChange = this.handleChange.bind(this);
+    }
+
+
+    handleChange = (event, value) => {
+        if (value === 1) {
+            this.setState({ value: 1 });
+            console.log('ee');
+        }
+        this.setState({ value });
+    };
+
+    render() {
+        const { value } = this.state;
+        return (
+        <div>
+            <AppBar/>
+             <h1 style = {{margin: '10px 0px 0px 10px'}}>
+                Water Quality Map.
+            </h1>
+            <div style={{margin: '10px 10px 10px 10px', fontSize: '18px'}}>
+                Your health is important to us.These strips are specially formulated
+                for multi - use which may not be sensitive enough
+                for testing certain elements in drinking water.<br/>Currently there is no such home test
+                for testing trace amounts of lead, copper, iron, and fluoride.If you need an in -depth analysis of your drinking water, please seek lab testing.
+            </div>
+            <div style={{margin: '10px 10px 10px 10px'}}>
+                Important Information
+                <br/>● Keep cap tightly closed between each use.
+                <br/>● Store at room temperature.
+            </div>
+            <Grid container spacing={24}>
+                <Grid item xs={8}>
+                    {/* <MapBox
+                        token= { TOKEN }
+                        longitude= { LONG }
+                        latitude= { LAT }
+                        zoom= { ZOOM }
+                        showPopUp= { true }
+                        style = { STYLE_ID }
+                    /> */}
+                    <Map handleChange = {this.handleChange}/>
+                </Grid>
+                <Grid item xs={4}>
+                    {
+                    this.state.value == 1 ? (<InfoPanel/>):(<div></div>)
+                    } {
+                    this.state.value == 2 ? (<InfoPanel2/>):(<div></div>)
+                    }
+                </Grid>
+            </Grid>
+    
+        </div>
+        );
+    }
 }
-
-ButtonAppBar.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
-
-export default withStyles(styles)(ButtonAppBar);
