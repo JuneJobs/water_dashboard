@@ -38,8 +38,8 @@ export default class App extends Component {
         const { value } = this.state;
         return (
         <div>
-            <AppBar/>
-             <h1 style = {{margin: '10px 0px 0px 10px'}}>
+            {/* <AppBar/> */}
+             {/* <h1 style = {{margin: '10px 0px 0px 10px'}}>
                 Water Quality Map.
             </h1>
             <div style={{margin: '10px 10px 10px 10px', fontSize: '18px'}}>
@@ -52,7 +52,7 @@ export default class App extends Component {
                 Important Information
                 <br/>● Keep cap tightly closed between each use.
                 <br/>● Store at room temperature.
-            </div>
+            </div> */}
             <Grid container spacing={24}>
                 <Grid item xs={8}>
                     {/* <MapBox

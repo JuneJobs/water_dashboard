@@ -10,8 +10,8 @@ export default class Map extends Component {
     componentDidMount(){
 		//Google Map API access information
 		var handleChange = this.props.handleChange;
-		var map;
-		map = new google.maps.Map(document.getElementById('map'), {
+		
+		var map = new google.maps.Map(document.getElementById('map'), {
 			center: {
 				lat: 47.286093,
 				lng: -174.568089
