@@ -179,7 +179,7 @@ export default class InfoPanel2 extends Component {
             "income": 0.15,
             "color": chart3.colors.next()
         }, {
-            "year": 'TotalChlorine',
+            "year": 'Total<br/>Chlorine',
             "income": 0.3,
             "color": chart3.colors.next()
         }];

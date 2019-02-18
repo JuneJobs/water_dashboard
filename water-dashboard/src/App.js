@@ -5,6 +5,7 @@ import AppBar from './containers/AppBar';
 import Map from './containers/Map';
 import InfoPanel from './containers/InfoPanel';
 import InfoPanel2 from './containers/InfoPanel2';
+import InfoPanel3 from './containers/InfoPanel3';
 import Grid from '@material-ui/core/Grid';
 import './App.css';
 
@@ -54,7 +55,7 @@ export default class App extends Component {
                 <br/>● Store at room temperature.
             </div> */}
             <Grid container spacing={24}>
-                <Grid item xs={8}>
+                <Grid item xs={6}>
                     {/* <MapBox
                         token= { TOKEN }
                         longitude= { LONG }
@@ -65,11 +66,11 @@ export default class App extends Component {
                     /> */}
                     <Map handleChange = {this.handleChange}/>
                 </Grid>
-                <Grid item xs={4}>
+                <Grid item xs={6}>
                     {
                     this.state.value == 1 ? (<InfoPanel/>):(<div></div>)
                     } {
-                    this.state.value == 2 ? (<InfoPanel2/>):(<div></div>)
+                    this.state.value == 2 ? (<InfoPanel3/>):(<div></div>)
                     }
                 </Grid>
             </Grid>
