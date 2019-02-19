@@ -20,7 +20,7 @@ export default class InfoPanel2 extends Component {
             "income": 6,
             "color": chart.colors.next()
         }, {
-            "year": 'Alkalinity',
+            "year": '알칼리도',
             "income": 76.47,
             "color": chart.colors.next()
         }, {
@@ -89,7 +89,7 @@ export default class InfoPanel2 extends Component {
             "income": 6,
             "color": chart2.colors.next()
         }, {
-            "year": 'Alkalinity',
+            "year": '알칼리도',
             "income": 76.47,
             "color": chart2.colors.next()
         }, {
@@ -155,7 +155,7 @@ export default class InfoPanel2 extends Component {
             "income": 7,
             "color": chart3.colors.next()
         }, {
-            "year": 'Alkalinity',
+            "year": '알칼리도',
             "income": 156,
             "color": chart3.colors.next()
         }, {
@@ -209,7 +209,7 @@ export default class InfoPanel2 extends Component {
             "income": 7,
             "color": chart4.colors.next()
         }, {
-            "year": 'Alkalinity',
+            "year": '알칼리도',
             "income": 156,
             "color": chart4.colors.next()
         }, {
