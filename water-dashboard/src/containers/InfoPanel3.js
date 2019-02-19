@@ -67,8 +67,8 @@ export default class InfoPanel3 extends Component {
             "name": "PH",
             "value": 7
         }], "chartdiv1", 
-        14,
-        6);
+        10.5,
+        8);
         graphMaker([{
             "name": "알칼리도",
             "value": 76.47
@@ -79,74 +79,74 @@ export default class InfoPanel3 extends Component {
             "name": "경도",
             "value": 183
         }], "chartdiv3", 
-        500,
-        375);
+        390,
+        300);
         graphMaker([{
             "name": "철",
             "value": 0
         }], "chartdiv4",
-        100,
-        75);
+        0.39,
+        0.3);
         graphMaker([{
             "name": "구리",
-            "value": 12
+            "value": 1.3
         }], "chartdiv5",
-        100,
-        75);
+        1.3,
+        1);
         graphMaker([{
             "name": "질산염",
             "value": 12
         }], "chartdiv6",
-        100,
-        75);
+        13,
+        10);
         graphMaker([{
             "name": "아질산염",
             "value": 5
         }], "chartdiv7",
-        80,
+        78,
         60);
         graphMaker([{
             "name": "총 염소",
             "value": 0
         }], "chartdiv8",
-        100,
-        75);
+        325,
+        250);
         graphMaker([{
             "name": "PH",
             "value": 5.5
         }], "chartdiv9", 
-        14,
-        7);
+        10.5,
+        8);
         graphMaker([{
             "name": "알칼리도",
             "value": 10
         }], "chartdiv10",
-        400,
+        390,
         300);
         graphMaker([{
             "name": "경도",
             "value": 120
         }], "chartdiv11", 
-        500,
-        375);
+        390,
+        300);
         graphMaker([{
             "name": "철",
             "value": 0
         }], "chartdiv12",
-        100,
-        75);
+        0.39,
+        0.3);
         graphMaker([{
             "name": "구리",
-            "value": 5.5
+            "value": 1.3
         }], "chartdiv13",
-        100,
-        75);
+        1.3,
+        1);
         graphMaker([{
             "name": "질산염",
             "value": 14
         }], "chartdiv14",
-        100,
-        75);
+        13,
+        10);
         graphMaker([{
             "name": "아질산염",
             "value": 5
@@ -157,14 +157,14 @@ export default class InfoPanel3 extends Component {
             "name": "총 염소",
             "value": 0
         }], "chartdiv16",
-        100,
-        75);
+        325,
+        250);
         graphMaker([{
             "name": "PH",
             "value": 7
         }], "chartdiv17",
-        14,
-        7);
+        10.5,
+        8);
         graphMaker([{
             "name": "알칼리도",
             "value": 156
@@ -175,26 +175,26 @@ export default class InfoPanel3 extends Component {
             "name": "경도",
             "value": 144
         }], "chartdiv19", 
-        500,
-        375);
+        390,
+        300);
         graphMaker([{
             "name": "철",
             "value": 0
         }], "chartdiv20",
-        100,
-        75);
+        0.39,
+        0.3);
         graphMaker([{
             "name": "구리",
             "value": 0.1
         }], "chartdiv21",
-        100,
-        75);
+        1.3,
+        1);
         graphMaker([{
             "name": "질산염",
             "value": 0.3
         }], "chartdiv22",
-        100,
-        75);
+        1.3,
+        1);
         graphMaker([{
             "name": "아질산염",
             "value": 0.15
@@ -205,14 +205,14 @@ export default class InfoPanel3 extends Component {
             "name": "총 염소",
             "value": 0.3
         }], "chartdiv24",
-        100,
-        75);
+        325,
+        250);
         graphMaker([{
             "name": "PH",
             "value": 6
         }], "chartdiv25",
-        14,
-        7);
+        10.5,
+        8);
         graphMaker([{
             "name": "알칼리도",
             "value": 0
@@ -223,26 +223,26 @@ export default class InfoPanel3 extends Component {
             "name": "경도",
             "value": 0
         }], "chartdiv27",
-        500,
-        375);
+        390,
+        300);
         graphMaker([{
             "name": "철",
             "value": 0
         }], "chartdiv28",
-        100,
-        75);
+        0.39,
+        0.3);
         graphMaker([{
             "name": "구리",
             "value": 0
         }], "chartdiv29",
-        100,
-        75);
+        1.3,
+        1);
         graphMaker([{
             "name": "질산염",
             "value": 0
         }], "chartdiv30",
-        100,
-        75);
+        13,
+        10);
         graphMaker([{
             "name": "아질산염",
             "value": 0.15
@@ -253,8 +253,8 @@ export default class InfoPanel3 extends Component {
             "name": "총 염소",
             "value": 0.14
         }], "chartdiv32",
-        100,
-        75);
+        325,
+        250);
     }
     render() {
         return (
